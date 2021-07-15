@@ -1,4 +1,5 @@
 # MAS
+MR Analysis Software (MAS) for MR image and spectroscopy
 
-MR image and spectroscopy suite of software routines written in IDL
+A suite of software routines written in IDL
 
