@@ -1,0 +1,502 @@
+commit 2c876db3c13e4cc1a65ac637d3440bc91822b86c
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Thu Aug 30 19:19:51 2018 -0400
+
+    New version of MAS released.
+
+commit 080b33528cacd22f2240b767067bf80277c96634
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Thu Aug 30 19:18:52 2018 -0400
+
+    Bug fixes
+
+commit 615787c4949a178701ca676861e7f676fb0def39
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Thu Aug 30 19:18:10 2018 -0400
+
+    Updates to gradient pre-emphasis GUI.
+
+commit f8b7c4e7d35b8c4682d968cb248e6809011df6a0
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Thu Aug 30 17:07:13 2018 -0400
+
+    Flow imaging calculation modified to account for physical to logical flow gradient axes transformation, and bug in velocity display aspect ratio fixed.
+
+commit 5aa7fd6208da136400b29bcdf000f2b98b068db3
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Thu Aug 30 14:36:32 2018 -0400
+
+    Bug fixes
+
+commit 98eff8d78eb85872de828aa674b408887b3bd0a5
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Thu Aug 30 14:36:18 2018 -0400
+
+    Bug fixes
+
+commit d9deb539870a4b27eadffe2dfea164d2726c9e4d
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Thu Aug 30 14:32:46 2018 -0400
+
+    Added Euler angles to imndArray
+
+commit ddd14ee28666cdb80a059cc74897e547ba80dad9
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Tue Jun 26 16:51:39 2018 -0400
+
+    Updates to the flow widget,
+    1) Added an option to show ROI averaged velocities
+    2) Modified cine MIP to display all three components of velocity and speed
+    3) Added an option to apply phase correction to individual velocity components
+
+commit e974445550eae75771ae82489dd8f81a06c3b53a
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Fri Apr 27 10:48:38 2018 -0400
+
+    Improved display of the 1D spectrum saved as plot.
+
+commit 26a10f8b331f01d12ad3fdf6e9548b62d8e54031
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Fri Apr 27 10:47:50 2018 -0400
+
+    Made following changes to flow imaging widget,
+    1) Fixed bugs
+    2) Improved GUI (Included additional flow encoding parameters to be displayed and added image overlay on the velocity map
+    3) Added an optional second ROI for static phase error correction
+    4) Replaced FSL’s phase unwrapping routine to the one developed in-house based on the optics paper
+    5) Changed units of velocity to um/s
+    6) Added axes in the composite velocity plot
+
+commit 581684e31ab8c1c0de3237c3bad66a7f70507f10
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Thu Mar 1 18:36:08 2018 -0500
+
+    Added option in 3D phase unwrapping routine to unwrap arbitrary jumps.
+
+commit cc6fe2cd44d222b97f7117efe78adcc9e6a6280f
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Fri Feb 9 12:03:22 2018 -0500
+
+    Included an option in the 1D spectroscopy analysis menu to export spectral stability data in .csv for offline processing.
+
+commit 6954b653bc59f6a0d35ad2814eeab74f6690a454
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Fri Feb 9 12:02:33 2018 -0500
+
+    Time stamp of Agilent scans changed from ‘time_submitted’ to ‘time_run’
+
+commit 2ba56a25a78d9b0267b7f75420fc657dede21f92
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Thu Feb 1 11:39:22 2018 -0500
+
+    Fixed bug with phase unwrapping routine in flow imaging widget.
+
+commit a39d19877eaef34f053d206c037d6a48102c4339
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Thu Jan 18 11:58:12 2018 -0500
+
+    Following updates to the gradient pre-emphasis widget
+    1) Fixed bug with 1D phase unwrapping multi-echo data in time using external IDL routine.
+    2) Fixed bug calculating special functions needed for fitting the gradient time response
+    3) Echo times from multi-echo data now read directly from the procpar file
+    4) Added eigenmode excitation bandwidth for all the pulse shapes
+    5) Added option to zero fill, apodize and smooth (moving average filter) the gradient time response
+    6) Added option to plot the gradient response spectrum and time series without fitting
+    7) Improved accuracy of pre-emphasis parameter estimates by fitting the time response sequentially with eddy current and oscillation models.
+    8) Improved spatial fitting by using multiple linear models (16 models) to fit the magnetic field in space and using AIC to find the best model
+
+commit eb91da69f67e07f1b261bc032ba5833501fc2bed
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Thu Jan 18 11:49:56 2018 -0500
+
+    Fixed plot scales based on venc for the flow scans and added arrows to the composite plots showing the coordinate system.
+
+commit 1b9f33c4c3e91e918977bb6828408fed07e36e6b
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Sat Jan 13 14:49:01 2018 -0500
+
+    Bug with slice dimension resolution in imndArray fixed.
+
+commit ac0a398161d11ccad07db7ef71f6a55c08cbe6bf
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Sat Jan 13 14:47:57 2018 -0500
+
+    Updates on flow imaging widget
+    1) Velocities outputted/displayed in mm/s instead of normalized unit earlier
+    2) Fixed bug with flow rate ROI calculation which is now operated on state1 data without any transformation.
+    3) Binary file export of the velocity vectors improved with a display widget showing data type, dimensions for reading data.
+
+commit f9f6c905c5ef1eeadab6230fec94d6ad008f749c
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Fri Dec 29 12:21:12 2017 -0500
+
+    Added options to export high resolution images for publication (300 dpi for black and white, 600 dpi for color and 1200 dpi for line plots). Images will be automatically saved into the current fid directory.
+
+commit fbfe339e9438e0a8f0b643caf1e42ee735f9529b
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Wed Dec 20 12:08:47 2017 -0500
+
+    Included capability to read arrayed 3D multi-echo Agilent data with seqcon set to csssn
+
+commit db10002465c2cfdd3f69320384863186bf39e1b4
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Fri Dec 1 15:04:37 2017 -0500
+
+    Included capability in gradient pre-emphasis sub routine,
+    1) Process arrayed multi-echo gradient echo data (mge3d_Bez sequence)
+    2) Included model distortions from shifted sine integral gradient pulse
+    3) Bug fixes
+
+commit ec885d3139ea27a80155b3ddeb4884efd51c0818
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Fri Dec 1 15:01:43 2017 -0500
+
+    Increased font size in Logan/Patlak plots in DCE processing routine
+
+commit a7aa42e9e892234c7c92ea1e5e0aa4f0762066a9
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Fri Dec 1 14:59:34 2017 -0500
+
+    Improved flow visualization routines and small bug fixes.
+
+commit 5cf7265d6f7e63a4e8001336555f61f730c52bdb
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Tue Oct 17 15:12:34 2017 -0400
+
+    New MAS version 20171017
+
+commit ef4b7764ce51be730315f08220655daff821aae2
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Tue Oct 17 14:57:38 2017 -0400
+
+    Removed plotting in DCE curve fitting GUI using iTools.
+
+commit 902571daf0718b7878cb4931956dce86afc90d8a
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Tue Oct 10 20:12:59 2017 -0400
+
+    New MAS version 20171010
+
+commit 8bc278e90357aa08b34b25576201ecdcc1359ba0
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Tue Oct 10 18:33:21 2017 -0400
+
+    Updated gradient pre-emphasis widget
+    1) Incorporated eddy current modeling with different gradient shapes
+    2) Extended the eddy current model to include oscillations
+    3) Removed bugs from fitting algorithm
+
+commit 6ee90ec8caa3cf90b518b2074286c2afab177b54
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Tue Oct 10 18:18:24 2017 -0400
+
+    Bug fixes
+
+commit ce3895c3e66e304640884faf69725720d970a564
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Tue Oct 10 10:57:15 2017 -0400
+
+    Added option to skip initial post scans in DCE processing widget while performing graphical analysis (useful for Logan plots)
+
+commit f74d095aa49a958626a5cac592cda7bd24eaaae7
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Sat Sep 30 22:40:33 2017 -0400
+
+    Following changes were made to flow GUI,
+    1) Added option to export velocity vector data
+    2) Included bigDelta to displayed
+    3) Fixed sign error in the velocity calculation
+    4) Improved flow visualization using newer IDL routines for vector and streamline plots.
+
+commit 36f5a67e2be7ac2854a0f85b53a6ae8125b3f8af
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Sat Sep 30 22:36:08 2017 -0400
+
+    Added T2* fitting with FID in 1D spectrum GUI
+
+commit 8aa01279506213a92055b67dfd90dcb094b31b17
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Fri Aug 18 17:09:12 2017 -0400
+
+    Fixed bug reading position scans in Bruker Paravision
+
+commit ac1ee94f2e2c85deb480b5b91202520111dc426e
+Author: Magdoom <Magdoom@Magdoom.local>
+Date:   Sat Jul 22 11:51:10 2017 -0400
+
+    Bug fixes
+
+commit dc69e9bf1230f6b9523332ace2ce6f898ea63133
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sun May 21 12:57:59 2017 -0400
+
+    Fixed bug reading multiple echo times in Bruker data
+
+commit fb0f9e0a43d8b9d8267e6a368a138dd00a387099
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sun May 21 12:57:38 2017 -0400
+
+    Added gradient coil name in imndArray
+
+commit 4932c6bb0a74944616fb08c601cbdcd66bd8c487
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Wed May 10 21:04:31 2017 -0400
+
+    Fixed phase sign error with deltaB algebra code.
+
+commit 76669c8c75db711625e1f8aa52cd8a5fa69dad34
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Wed May 10 21:04:01 2017 -0400
+
+    Added option to view Bruker file showing hardware configuration used in the scan under Display -> Bruker Parameter File -> Display config file
+
+commit 988e7cdf02cb3b15dcaa18b1e5a10f049c8b082f
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sun Apr 23 12:05:42 2017 -0400
+
+    no message
+
+commit d5cb0c435fb424d6a87aa4995eb9131e7540b545
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sat Apr 22 18:12:24 2017 -0400
+
+    Added functionality to read free precession delays from Bruker data for deltaB measurement.
+
+commit 78548080af3fbbc7f86ea1323c87ca774475a0c2
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sun Apr 16 12:49:27 2017 -0400
+
+    Display for time domain 1D spectroscopy data changed from real to magnitude.
+
+commit 5a7cad3b937c23fcd35c45fcfb79a6496f44d860
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Wed Apr 12 13:30:12 2017 -0400
+
+    Fixed bug thresholding 3D data in calculate deltaB GUI
+
+commit 4a321dbb02055d0ab00ee69ad1ce593fdfabece0
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Wed Apr 12 13:29:37 2017 -0400
+
+    Fixed bug with phase unwrap code
+
+commit c96bc2aff0e64423fcfe6cef4b115325d241e842
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Wed Apr 12 13:28:14 2017 -0400
+
+    Changes to calculate deltaB widget.
+    1) Changed displayed deltaB map units to ppm
+    2) Included high pass filtering (Laplacian filter) to remove background field or phase
+    3) Ability to process multi-echo data
+
+commit e88db39f28f0e81fc5fe9527b35538b15d0a4a9d
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Wed Apr 12 13:25:35 2017 -0400
+
+    Fixed bug reading acquisition time with Agilent 1D spectroscopy data
+
+commit 076d43f3481fe6a948cfdd40f40dd374aa20c612
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sat Apr 1 16:35:40 2017 -0400
+
+    Incorporated field map calculation from multi echo gradient echo data set on calc_delta_b_algebra GUI
+
+commit acbc5412f1cfb12cac692fc31ba4dfbf1ede6206
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Mon Mar 27 15:11:19 2017 -0400
+
+    Corrected population AIF parameters in DCE processing subroutine to apply for rats
+
+commit dc8aa5af0fd3b72fcbe02a1f92bd654dbeea9d34
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Mon Mar 27 15:10:31 2017 -0400
+
+    Fixed bug with reading eddy current measurement related parameters
+
+commit a05e49ecc06502212911091008c6b18d9ace7f96
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Mon Mar 27 15:09:36 2017 -0400
+
+    Fixed bug with Agilent EPIP reconstruction with pointwise correction scans
+
+commit 4f1ed5f1b53df80a4f43b31549e0311a605df153
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Mon Mar 6 15:14:04 2017 -0500
+
+    Updated population AIF parameters for rats in DCE processing subroutine based on Bankson’s paper
+
+commit c87d71f2ed49336120111e7eac7e9627f79e094d
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Thu Feb 16 17:57:05 2017 -0500
+
+    Bug fixed on slice gap units for Agilent multi-slice data
+
+commit 24a755275ee0d8509f04bd544c3080e1548be19f
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Mon Jan 30 12:17:16 2017 -0500
+
+    Fixed sign error in flow imaging calculation
+
+commit 0f1330b0067a5efd15ced8f68f434e5c63d1588e
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Mon Jan 30 12:16:52 2017 -0500
+
+    Fixed bug with plot legend command in DCE processing
+
+commit b52d131f9bed46d5f49186be1b86152c2036b3b2
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Mon Jan 30 12:16:13 2017 -0500
+
+    no message
+
+commit 0ca5c5c32071fb0626742c968e2f026429479667
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Mon Jan 23 14:23:17 2017 -0500
+
+    New release, MAS20170123
+
+commit c90d8db3573108011e55caf17f88dfee5e1c6163
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Mon Jan 23 14:01:58 2017 -0500
+
+    Bug fixes
+
+commit 5e6dda96ffa13498cbdc24fd5bba92b73d63ba25
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Mon Jan 23 14:01:26 2017 -0500
+
+    Bug fixes
+
+commit 4de8727c0565ff39493ab066f6c8e003a4571df6
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Mon Jan 23 14:00:24 2017 -0500
+
+    Cosmetic change for the signal enhancement plot (title changed)
+
+commit 37034b26e09794ddc66774fe5075f5d22705b2bc
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Mon Jan 23 13:59:09 2017 -0500
+
+    DCE processing routine changed to analyze with multi-model statistical inference.
+
+commit 32b926a12223b3fbd2f57246b0a686396a58ffc7
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sat Nov 19 10:19:47 2016 -0500
+
+    Added a couple of features in 1D spectroscopy GUI,
+    1) Added option to calculate temperature based on chemical shift differences in methanol and ethylene glycol.
+    2) Added option to plot NMR frequency, phase, line width and amplitude for a given peak between red and green lines over different arrays. It could be used for example to look at spectral stability.
+
+commit 09ae731d649656d059cbe6f29a820dd02fc46dc2
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sat Nov 19 10:16:03 2016 -0500
+
+    Fixed bug reading Agilent mems and mgems data
+
+commit 224cc7402fc15a803ef63d684b7701b69735af01
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sat Oct 29 11:24:52 2016 -0400
+
+    Added phase unwrap button in main MAS window
+
+commit 90942fad149287cbec31dfe823ed1ecddfbdff9f
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sat Oct 29 11:24:28 2016 -0400
+
+    Separate subroutine for unwrapping phase using FSL's prelude (if available in the system running MAS) and in-house Fourier based method.
+
+commit 740a633d1115d526f9886ec336b714b4d73a487a
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sat Oct 29 11:22:29 2016 -0400
+
+    Fixed bug with reading mems and mgems data from Agilent
+
+commit 66b1f916d0530d96a343a1ef5b13e642aae99341
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sat Oct 29 11:22:03 2016 -0400
+
+    Corrected sign of deltaB in susceptibility mapping code.
+
+commit 91c0d028e65e8de9c42a2f3129d4de5a813a5b00
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sat Oct 29 11:21:25 2016 -0400
+
+    Modified susceptibility mapping code to read free precession delays with PV6.0.1
+
+commit 2e1762a94c45fee2cc51cbc0e43c4840def1f0b5
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sat Oct 29 11:20:41 2016 -0400
+
+    Version change
+
+commit 398e7d7b3cfce83649c53af9ebffa4ca34c9f462
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Tue Oct 11 12:12:19 2016 -0400
+
+    New release, MAS20161011
+
+commit 69efe9239bc76c31eb0f5ceace3b41d4f27673d2
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Fri Sep 23 18:08:26 2016 -0400
+
+    Optimized 3D FFT routine
+
+commit 2ea1a7a626d5fd98d5175e4c0ebf54050fa65076
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Fri Sep 23 09:50:05 2016 -0400
+
+    Fixed bug with 3D FFT
+
+commit 73954746e9fb02a0f3c055028e589f97e1d395d9
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Wed Sep 21 11:16:19 2016 -0400
+
+    Fixed bug with reading Agilent multi-echo 2D data
+
+commit c02c5c8b6023ae533d9b42f4ad47f79d6de9028f
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Mon Sep 19 10:07:23 2016 -0400
+
+    Fixed bug with reading repetition scans vs variable TR scans
+
+commit 3cbcb193d833a1dd97fd80e98dfb834d26fe2d87
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Mon Sep 19 09:23:02 2016 -0400
+
+    Added phase unwrapping feature in main MAS window under settings tab.
+
+commit 0b2ee7131d70285cc698ce8dc3dc036560751b93
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sat Sep 10 09:36:25 2016 -0400
+
+    no message
+
+commit 19ecb7bb7581068bf0ad676b6f218753f445392c
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Sat Sep 10 08:53:00 2016 -0400
+
+    New releases, MAS20160910
+
+commit 73fdb409aeb09972e698749db570fc5f44995c5d
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Fri Sep 9 12:37:38 2016 -0400
+
+    Fixed bug with slice slider numbering when reading DICOM files.
+
+commit 2c8c8d4dfa6ed6118830220cdbface08f6dd06e6
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Fri Sep 2 17:36:38 2016 -0400
+
+    Fixed bug with phase unwrapping in deltaB_least_squares code for susceptibility measurement
+
+commit 9d103a65a1c15f31369e63c5a7125d0e99a34227
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Wed Aug 31 13:11:33 2016 -0400
+
+    Fixed bug with reading center frequency in DICOMs
+
+commit 3da8288c5f8b7d04e738aa0bc652aa4dddc48c2b
+Author: Magdoom <Magdoom@Magdooms-MacBook-Pro.local>
+Date:   Mon Aug 29 18:50:08 2016 -0400
+
+    Fixed bug with phase unwrapping in deltaBz least square method
